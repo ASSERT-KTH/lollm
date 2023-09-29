@@ -1,0 +1,9 @@
+{
+ "model": "gpt4",
+ "data_constraints_can_be_checked": "False",
+ "number_of_options_in_the_generators": "infinite",
+ "cultural_alignment": "5", # overall subjective assessment with expertise
+ "cultural_alignment_quantitative": "inf/inf",
+ "executes": "no",
+ "contains_true_generator":"yes", # should not simply configure the library https://gist.github.com/monperrus/744141e76501643c5970e1df0cfa00e4
+}

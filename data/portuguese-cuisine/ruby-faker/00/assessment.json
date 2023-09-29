@@ -1,0 +1,12 @@
+{
+# number of possible data items done by the generators
+# enumerates all possible combinations
+# can be infinity / uncomputable is some cases
+ "model": "gpt4",
+ "data_constraints_can_be_checked": "False",
+ "number_of_options_in_the_generators": "infinite",
+ "cultural_alignment": "0", # overall subjective assessment with expertise
+ "cultural_alignment_quantitative": "0/inf",
+ "executes": "yes",
+ "contains_true_generator":"no", # should not simply configure the library https://gist.github.com/monperrus/744141e76501643c5970e1df0cfa00e4
+}

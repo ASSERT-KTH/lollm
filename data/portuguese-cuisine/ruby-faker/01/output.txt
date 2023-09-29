@@ -1,0 +1,55 @@
+To create a custom test data generator in ruby using the ruby-faker gem, you must first have the faker and faker/portuguese gems installed in your ruby environment. If not, you can install them using gem install faker and gem install faker/portuguese respectively. After successfully installing the gems, the code snippet below can be used to generate random Portuguese fine-dining restaurant full menus.
+
+```ruby
+require 'faker'
+
+Faker::Config.locale = 'pt'
+
+class RestaurantMenuGenerator
+  MAIN_DISHES = ['Bacalhau à Brás', 'Arroz de Pato', 'Francesinha', 'Tripas à Moda do Porto', 'Caldeirada', 'Sardinhas Assadas']
+  STARTER_DISHES = ['Açorda de Marisco', 'Alheira', 'Chouriço Assado', 'Pataniscas de Bacalhau']
+  DESSERT_DISHES = ['Pastéis de Nata', 'Arroz Doce', 'Serradura', 'Bola de Berlim', 'Pudim Abade de Priscos']
+
+  def self.generate
+    menu = {}
+
+    # Restaurant Details
+    menu[:restaurant_name] = Faker::Restaurant.name
+    menu[:restaurant_location] = Faker::Address.full_address
+    menu[:restaurant_type] = 'Fine-Dining'
+
+    # Starter
+    menu[:starter_dishes] = Array.new(3) {
+      {
+        name: STARTER_DISHES.sample,
+        price: Faker::Commerce.price(range = 5..15.00)
+      }
+    }
+
+    # Main Dishes
+    menu[:main_dishes] = Array.new(5) {
+      {
+        name: MAIN_DISHES.sample,
+        price: Faker::Commerce.price(range = 20..40.00)
+      }
+    }
+
+    # Desserts
+    menu[:dessert_dishes] = Array.new(3) {
+      {
+        name: DESSERT_DISHES.sample,
+        price: Faker::Commerce.price(range = 5..15.00)
+      }
+    }
+
+    menu
+  end
+end
+
+# Generate and print 10 menus
+10.times do
+  p RestaurantMenuGenerator.generate
+end
+```
+
+In the code above, there are three arrays of traditional Portuguese dishes for main courses, starters and desserts. For each category of dishes, 3 to 5 dishes are chosen at random and a price is generated. You just need to run the code and it will print Ruby Hash structures representing menus, including the restaurant details and a list of dishes with their prices.

@@ -1,0 +1,40 @@
+Sure, I can create a very simple example of a script that generates random menus with the ruby-faker library. Ruby-faker is a gem that generates fake data for you, like names, addresses, and phone numbers.
+
+First, you need to install the 'faker' gem if you haven't already. You can do this by running the command:
+
+```bash
+gem install faker
+```
+
+Here is a simple Ruby script that generates random Portuguese fine-dining restaurant menus:
+
+```ruby
+require 'faker'
+
+def random_menu_item
+  "#{Faker::Food.ingredient}, #{Faker::Food.spice}, and #{Faker::Food.vegetables}"
+end
+
+def random_portuguese_fine_dining_menu
+  {
+    'Appetizers' => Array.new(5) { random_menu_item },
+    'Main Courses' => Array.new(5) { random_menu_item },
+    'Desserts' => Array.new(3) { Faker::Dessert.variety },
+    'Drinks' => Array.new(3) { Faker::Beer.brand },
+    'Restaurant Name' => Faker::Restaurant.name + ' (Portuguese Fine Dining)',
+    'Address' => Faker::Address.full_address,
+    'Phone' => Faker::PhoneNumber.phone_number,
+  }
+end
+
+10.times do
+  puts random_portuguese_fine_dining_menu
+  puts "\n"
+end
+```
+
+In this script, we use methods from Faker::Food, Faker::Dessert, Faker::Beer, Faker::Restaurant, Faker::Address, and Faker::PhoneNumber to generate random menu items, desserts, drinks, restaurant names, addresses, and phone numbers.
+
+It creates the random Portuguese fine-dining restaurant menus with sections for Appetizers, Main courses, Desserts, and Drinks, each filled with random items. The restaurant name and address are also randomly generated, as well as the phone number. We generate 10 menus in this script but you can change it to generate any amount of menus you need.
+
+Please note Faker does not currently support Portuguese cuisine specifically.

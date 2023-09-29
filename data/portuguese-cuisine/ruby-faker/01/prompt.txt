@@ -1,0 +1,3 @@
+Write a custom test data generator in ruby using the ruby-faker library that generates random portuguese fine-dining restaurant full menus.
+
+The restaurants must cook traditional portuguese food or adaptations of it.
