@@ -1,0 +1,32 @@
+Voici comment vous pouvez le faire avec la bibliothèque Ruby-Faker en considérant les professions spécifiques au film "Le père noël est une ordure".
+
+```ruby
+require 'faker'
+
+def generate_test_data
+  professions = ['Travailleuse Sociale', 'Agent de Police', 'Ambassadeur de Thaïlande', 'Père Noël', 'Psychiatre', 'Inconnu']
+  name = Faker::Name.name
+  address = Faker::Address.street_address
+  email = Faker::Internet.email
+  profession = professions.sample
+  data = {
+    name: name,
+    address: address,
+    email: email,
+    profession: profession
+  }
+end
+
+10.times do
+  p generate_test_data
+end
+```
+
+Dans ce script, nous avons une méthode generate_test_data pour générer les données de test. Nous utilisons plusieurs générateurs de Faker ici, comme Faker::Name.name 
+pour obtenir un nom aléatoire, Faker::Address.street_address pour l'adresse et Faker::Internet.email pour l'e-mail.
+
+En ce qui concerne le champ "profession" demandé, on considère un tableau des professions du film. Ensuite la fonction sample est utilisée pour obtenir une profession 
+aléatoire à partir de notre tableau.
+
+Le morceau final du script exécute simplement la fonction generate_test_data à dix reprises et imprime chaque résultat à la console. Vous pouvez bien sûr remplacer le 
+'10' par le nombre souhaité de données de test à générer.

@@ -1,0 +1,12 @@
+[
+{:name=>"Rachael Gleason IV", :address=>"4214 Edgardo Crescent", :email=>"delsie.oconnell@kuphal-turcotte.example", :profession=>"Travailleuse Sociale"}
+{:name=>"Delmar Klocko", :address=>"157 Schuppe Spurs", :email=>"adell_treutel@macgyver.example", :profession=>"Agent de Police"}
+{:name=>"Lynwood Walter", :address=>"5527 Lesch Garden", :email=>"cyril_price@borer.example", :profession=>"Inconnu"}
+{:name=>"The Hon. Vicente Schumm", :address=>"65857 Sporer Ville", :email=>"kristen_kohler@parisian.test", :profession=>"Psychiatre"}
+{:name=>"Pres. Winifred Davis", :address=>"249 Gerlach Keys", :email=>"aron@little.test", :profession=>"Travailleuse Sociale"}
+{:name=>"Vanda Jacobs", :address=>"936 Ruecker Glens", :email=>"marlen@schulist.test", :profession=>"Père Noël"}
+{:name=>"Mervin Weber", :address=>"797 Joette Fort", :email=>"tillie_kertzmann@rath.test", :profession=>"Inconnu"}
+{:name=>"Antoine Becker", :address=>"1535 Jacobi Dale", :email=>"don@schoen.test", :profession=>"Père Noël"}
+{:name=>"Donald Lindgren Esq.", :address=>"33827 Torp Manor", :email=>"fairy_brakus@carter.example", :profession=>"Père Noël"}
+{:name=>"Hunter Parisian", :address=>"85412 Lindgren Vista", :email=>"jerry@watsica.example", :profession=>"Père Noël"}
+=> 10
