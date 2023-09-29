@@ -10,6 +10,7 @@ Then inside a folder:
 * <number_trial>/prompt.txt
 * <number_trial>/output.txt
 * <number_trial>/assessment.json
+* <number_trial>/execution-result.txt
 
 Example of `assessment.json`:
 ```json
