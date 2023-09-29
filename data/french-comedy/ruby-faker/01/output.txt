@@ -1,0 +1,35 @@
+Dans "Le Père Noël est une ordure", il s'agit d'un film comique mettant en scène des personnages 
+masculins et féminins. Toutefois, pour transformer cela en un champ "sexe" aléatoire, on peut se 
+contenter des valeurs standard "Masculin" et "Féminin". Voici un exemple de comment le faire avec
+la gem Ruby-Faker :
+
+```ruby
+require 'faker'
+
+Faker::Config.locale = 'fr'
+
+class User
+  attr_accessor :name, :sex
+
+  def initialize(name, sex)
+    @name = name
+    @sex = sex
+  end
+end
+
+def random_sex_generator
+  ['Masculin', 'Féminin'].sample
+end
+
+def test_data_generator(num)
+  num.times do
+    user = User.new(Faker::Name.name , random_sex_generator())
+    puts "Name: #{user.name}, Sex: #{user.sex}"
+  end
+end
+
+test_data_generator(10)
+```
+
+Ce code générera dix (ou tout autre nombre que vous spécifiez) enregistrements de test avec des 
+noms aléatoires et soit "Masculin" soit "Féminin" pour le "sexe".

@@ -1,0 +1,1 @@
+écrivez un générateur de données de test en Ruby selon la bibliothèque Ruby-Faker qui génère un champ de genre aléatoire pour un formulaire dans le style du film comique français "le père noël est une ordure"

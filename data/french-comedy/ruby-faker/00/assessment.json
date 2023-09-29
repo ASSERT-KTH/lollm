@@ -1,4 +1,5 @@
 {
+ "model":"gpt4",
  "data_constraints_can_be_checked": "n-a",
  "number_of_options_in_the_generators": "6",
  "cultural_alignment": "4",

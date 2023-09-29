@@ -1,0 +1,12 @@
+[
+Name: Reynaud Noélie, Sex: Féminin
+Name: Olivier Bruno, Sex: Masculin
+Name: Lefèvre Henryane, Sex: Féminin
+Name: Constantin Dumont, Sex: Masculin
+Name: Daniel Romuald, Sex: Féminin
+Name: Alcidie Girard, Sex: Masculin
+Name: Corentin Leroy, Sex: Masculin
+Name: Capt. Caroline Deschamps, Sex: Féminin
+Name: Mathilde Morin, Sex: Féminin
+Name: Adm. Enguerrand Riviere, Sex: Masculin
+=> 10
