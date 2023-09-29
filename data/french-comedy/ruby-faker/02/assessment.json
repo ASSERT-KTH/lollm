@@ -7,5 +7,5 @@
  "executes": "yes",
  "execute_error": "",
  "contains_true_generator":"yes",
- "comments":"miss 'ca dépend'"
+ "comments":"miss 'ca dépend', no french localization in the library as opposed to 01, hence the names and addresses are english"
 }
