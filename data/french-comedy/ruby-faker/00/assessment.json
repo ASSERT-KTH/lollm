@@ -1,0 +1,10 @@
+{
+ "data_constraints_can_be_checked": "n-a",
+ "number_of_options_in_the_generators": "6",
+ "cultural_alignment": "4",
+ "cultural_alignment_quantitative": "6/6=1",
+ "executes": "no",
+ "execute_error": "undefined method `randomize' for Faker::Base:Class (NoMethodError)",
+ "contains_true_generator":"yes",
+ "comments":"misses 'ca dépend ca dépasse'. the transgender/non-binary might come from the movie, but also form the training recent data"
+}
