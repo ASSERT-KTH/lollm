@@ -1,0 +1,52 @@
+Sure! Here's a Ruby Faker-style generator that includes 10 data points for both Kishore Kumar and Lata Mangeshkar lyrics, making 20 data points in total:
+
+```ruby
+class Faker
+  class IndianMusic
+    class << self
+      def kishore_kumar_lyrics
+        kishore_lyrics = [
+          'जिंदगी का सफर है ये कैसा सफर',
+          'पल पल दिल के पास तुम रहती हो',
+          'ये शाम मस्तानी, मदहोश किये जाए',
+          'रूप तेरा मस्ताना, प्यार मेरा दीवाना',
+          'मेरे मेहबूब कयामत होगी, आज रुसवाई की रात फिर होगी',
+          'चुकार मेरे मन को, की तूने क्या इशारा',
+          'हमें तुमसे प्यार कितना, ये हम नहीं जानते',
+          'तेरे चेहरे में वो जादू है',
+          'मेरे सपनों की रानी कब आएगी तू',
+          'तुम आ गए हो, नूर आ गया है'
+        ].sample
+      end
+      
+      def lata_mangeshkar_lyrics
+        lata_lyrics = [
+          'आजा रे परदेसी, मैंने बुलाया श्याम',
+          'जो वडा किया वो, निभाना पड़ेगा',
+          'चांद फिर निकला, मगर तुम नहीं आए',
+          'दिल विल प्यार व्यार, मैं क्या जानूं रे',
+          'हो गए आप के हम, क्या हम बताएँ',
+          'जरासी आहट होती है कौन है वो चुपके से',
+          'के बाबू जी, धीरे चलना',
+          'प्यार हूआ, इंकरार हूआ हाई',
+          'ये गुमनाम रास्तों की कहां आके ठहर गई है',
+          'तेरे बीना जीना, कहां का जीना'
+        ].sample
+      end
+    end
+  end
+end
+```
+
+And here's how you might use it:
+
+```ruby
+10.times do
+  puts "Kishore Kumar Lyrics: #{Faker::IndianMusic.kishore_kumar_lyrics}"
+  puts "Lata Mangeshkar Lyrics: #{Faker::IndianMusic.lata_mangeshkar_lyrics}"
+  puts "-------------------------------"
+end
+```
+
+This will generate 10 sets of lyrics, each set with one lyric from Kishore Kumar and one from Lata Mangeshkar.
+

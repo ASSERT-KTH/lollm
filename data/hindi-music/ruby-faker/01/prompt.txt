@@ -1,0 +1,2 @@
+Generate a ruby faker style generator to generate Kishore Kumar and Lata Mangeshkar lyrics, with at least 20 data points, in devanagari
+
