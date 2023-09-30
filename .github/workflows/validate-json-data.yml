@@ -12,20 +12,19 @@ on:
 jobs:
   validate-json:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        file:
+          - $(find . -type f -name 'assessment.json')
+
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Find and validate JSON files
-        run: |
-          # Use find to locate all assessment.json files and validate each one
-          find . -type f -name 'assessment.json' -print0 | while IFS= read -r -d $'\0' json_file; do
-            echo "Validating $json_file"
-            cardinalby/schema-validator-action@v3 --schema schemas/assessment.json --refSchemasMap='{"https://github.com/ASSERT-KTH/lollm//blob/main/schemas/assessment.schema.json": "schemas/assessment.schema.json"}' --file $json_file
-          done
-
-      - name: Check for validation errors
-        run: |
-          if grep -q "Validation failed" $GITHUB_WORKSPACE/$GITHUB_ACTION_PATH; then
-            echo "Validation failed"
-            exit 1
-          fi
+      - name: Validate JSON files
+        uses: cardinalby/schema-validator-action@v3
+        with:
+          file: ${{ matrix.file }}
+          schema: 'schemas/assessment.schema.json'
+          refSchemasMap: '{"https://github.com/ASSERT-KTH/lollm//blob/main/schemas/assessment.schema.json": "schemas/assessment.schema.json"}'

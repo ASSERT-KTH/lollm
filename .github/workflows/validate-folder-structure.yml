@@ -26,12 +26,16 @@ jobs:
         validation_failed=false
 
         # Check if the subfolders and sub-subfolders are correctly named
-        find . -type d -exec sh -c 'dir="{}"; if [ "$(ls -A "$dir" | wc -l)" -eq 0 ]; then if ! [[ "$(basename "$dir")" =~ ^[0-9][0-9]$ ]]; then echo "Invalid folder name: $dir"; validation_failed=true; fi; fi' \; 
+        find . -type d -exec sh -c 'dir="{}"; if [ "$(ls -A "$dir" | wc -l)" -eq 0 ]; then if ! [[ "$(basename "$dir")" =~ ^[0-9][0-9]$ ]]; then echo "Invalid folder name: $dir"; echo "::set-env name=validation_failed::true"; fi; fi' \; 
 
         # Check for required files in the sub data folders
-        find . -type d -name '[0-9][0-9]' -exec sh -c 'dir="{}"; if [ ! -f "$dir/prompt.txt" ] || [ ! -f "$dir/output.txt" ] || [ ! -f "$dir/execution-result.txt" ] || [ ! -f "$dir/assessment.json" ]; then echo "Missing files in folder: $dir"; validation_failed=true; fi' \;
+        find . -type d -name '[0-9][0-9]' -exec sh -c 'dir="{}"; if [ ! -f "$dir/prompt.txt" ] || [ ! -f "$dir/output.txt" ] || [ ! -f "$dir/execution-result.txt" ] || [ ! -f "$dir/assessment.json" ]; then echo "Missing files in folder: $dir"; echo "::set-env name=validation_failed::true"; fi' \;
 
-        # If validation failed, exit with an error status
-        if [ "$validation_failed" = true ]; then
+    - name: Finalize workflow
+      run: |
+        if [ "${{ env.validation_failed }}" = "true" ]; then
+          echo "Validation failed."
           exit 1
+        else
+          echo "Validation succeeded."
         fi
