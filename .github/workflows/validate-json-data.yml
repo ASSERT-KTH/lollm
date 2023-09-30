@@ -1,0 +1,28 @@
+name: JSON file validation
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - 'main'
+  push:
+    branches:
+      - main  
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Validate assessment JSON files
+        run: |
+          # Locate and validate assessment.json files
+          find data -type f -name 'assessment.json' -exec echo "Validating {}" \; -exec cardinalby/schema-validator-action@v3 --schema=schemas/assessment.schema.json --file={} --refSchemasMap='{"https://github.com/ASSERT-KTH/lollm//blob/main/schemas/assessment.schema.json": "schemas/assessment.schema.json"}' \;
+
+      - name: Check for validation errors
+        run: |
+          if grep -q "Validation failed" $GITHUB_WORKSPACE/$GITHUB_ACTION_PATH; then
+            echo "Validation failed"
+            exit 1
+          fi

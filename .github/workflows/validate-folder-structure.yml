@@ -1,0 +1,29 @@
+name: Data Folder Validation
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - 'main'
+  push:
+    branches:
+      - main  
+
+jobs:
+  validate_data_folders:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Check data folder
+      run: |
+        # Navigate to the data folder
+        cd data
+
+        # Check if the subfolders and sub-subfolders are correcly named
+        find . -type d -exec sh -c 'dir="{}"; if [ "$(ls -A "$dir" | wc -l)" -eq 0 ]; then if ! [[ "$(basename "$dir")" =~ ^[0-9][0-9]$ ]]; then echo "Invalid folder name: $dir"; exit 1; fi; fi' \; 
+
+        # Check for required files in the sub data folders
+        find . -type d -name '[0-9][0-9]' -exec sh -c 'dir="{}"; if [ ! -f "$dir/prompt.txt" ] || [ ! -f "$dir/output.txt" ] || [ ! -f "$dir/execution-result.txt" ] || [ ! -f "$dir/assessment.json" ]; then echo "Missing files in folder: $dir"; exit 1; fi' \;
