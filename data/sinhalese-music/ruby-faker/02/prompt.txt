@@ -1,0 +1,7 @@
+Write a test data generator in ruby using the ruby-faker library that randomly generates personal names mentioned in the song "උතුරු කොනේ නුඹ හිනැහෙන්" by Gunadasa Kapuge.
+
+Following are the lyrics for the first verse in the song. 
+උතුරු කොනේ නුඹ හිනහේ නඩරාජා මල්ලියේ           
+දකුණු කොනේ නුඹ හිනහේ  සුමනසිරි මල්ලියේ  
+උතුරු කොනේ නුඹ හිනහේ සෙල්ලම්මා නංගියේ             
+දකුණු කොනේ නුඹ හිනහේ  සෙනෙහෙලතා නංගියේ

@@ -1,0 +1,38 @@
+To generate test data for random popular Sri Lankan songs in Sinhala letters, we first need to have a list of popular songs during 2000-2010. Since there's no built-in feature in the ruby-faker library to generate Sri Lankan songs, we need to customize it. Here's an example of how to do it:
+
+```ruby
+require 'faker'
+
+class SriLankanSongGenerator
+  SONGS = [
+    "සුළඟ විලාසිත්තා",
+    "සිහින යකා",
+    "ඔබ නොදැන්නා මා නොදැන්නේ",
+    "පුංචි නිදා පුංචි සිහිනයේ",
+    "කවුරුත් දන්නේ නෑ සිහිනේ",
+    "රා රා බෝම්බෝම්",
+    "සඳ කුමරියෝ",
+    "පුරුදු වූ නුඹේ",
+    "මේ තරම් ප්‍රේමයි",
+    "නිළ අහසේ"
+  ]
+
+  def self.generate
+    {
+      title: SONGS.sample,
+      artist: Faker::Name.name,
+      release_year: Faker::Number.between(from: 2000, to: 2010)
+    }
+  end
+end
+
+# Generate 10 random songs
+10.times do
+  song = SriLankanSongGenerator.generate
+  puts "Title: #{song[:title]}, Artist: #{song[:artist]}, Release Year: #{song[:release_year]}"
+end
+```
+
+In this script, we define a list of popular Sri Lankan songs in Sinhala letters during 2000-2010. The `generate` method will randomly select a song from the list, generate a random name for the artist using the `Faker::Name.name` method, and generate a random release year between 2000 and 2010 using the `Faker::Number.between` method. Finally, we generate 10 random songs and print them out.
+
+Please note that the song titles are just examples and may not reflect actual popular Sri Lankan songs from the 2000-2010 period.

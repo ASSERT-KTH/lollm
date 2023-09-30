@@ -1,0 +1,18 @@
+Unfortunately, the "ruby-faker" library does not support generating names in Sinhalese or any specific names mentioned in a song. However, you can create a custom method to generate these names randomly. Here's an example of how you can do this:
+
+```ruby
+require 'faker'
+
+def generate_sinhalese_name
+  names = ["උතුරු කොනේ", "නුඹ හිනැහෙන්", "ගුණදාස කපුගේ"] # Add more names as needed
+  names.sample
+end
+
+10.times do
+  puts generate_sinhalese_name
+end
+```
+
+In this code, we define a method `generate_sinhalese_name` that returns a random name from the `names` array. We then call this method 10 times to generate 10 random names.
+
+Please note that this code does not use the "ruby-faker" library, as it does not support this specific use case.
