@@ -15,15 +15,23 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
 
     - name: Check data folder
       run: |
         # Navigate to the data folder
         cd data
 
-        # Check if the subfolders and sub-subfolders are correcly named
-        find . -type d -exec sh -c 'dir="{}"; if [ "$(ls -A "$dir" | wc -l)" -eq 0 ]; then if ! [[ "$(basename "$dir")" =~ ^[0-9][0-9]$ ]]; then echo "Invalid folder name: $dir"; exit 1; fi; fi' \; 
+        # Flag to track validation status
+        validation_failed=false
+
+        # Check if the subfolders and sub-subfolders are correctly named
+        find . -type d -exec sh -c 'dir="{}"; if [ "$(ls -A "$dir" | wc -l)" -eq 0 ]; then if ! [[ "$(basename "$dir")" =~ ^[0-9][0-9]$ ]]; then echo "Invalid folder name: $dir"; validation_failed=true; fi; fi' \; 
 
         # Check for required files in the sub data folders
-        find . -type d -name '[0-9][0-9]' -exec sh -c 'dir="{}"; if [ ! -f "$dir/prompt.txt" ] || [ ! -f "$dir/output.txt" ] || [ ! -f "$dir/execution-result.txt" ] || [ ! -f "$dir/assessment.json" ]; then echo "Missing files in folder: $dir"; exit 1; fi' \;
+        find . -type d -name '[0-9][0-9]' -exec sh -c 'dir="{}"; if [ ! -f "$dir/prompt.txt" ] || [ ! -f "$dir/output.txt" ] || [ ! -f "$dir/execution-result.txt" ] || [ ! -f "$dir/assessment.json" ]; then echo "Missing files in folder: $dir"; validation_failed=true; fi' \;
+
+        # If validation failed, exit with an error status
+        if [ "$validation_failed" = true ]; then
+          exit 1
+        fi
