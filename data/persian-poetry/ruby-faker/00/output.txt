@@ -1,0 +1,55 @@
+Creating a Ruby Faker-style generator for Hafez poem lines requires a bit of creativity and customization. You can use the Faker gem as a base and then customize it to generate Hafez-style poetry lines. Here's a basic example with at least 5 data points:
+
+```ruby
+require 'faker'
+
+module HafezFaker
+  class << self
+    def verse
+      Faker::Lorem.sentence
+    end
+
+    def ghazal
+      Array.new(5) { verse }.join("\n")
+    end
+
+    def rubaiyat
+      Array.new(4) { verse }.join("\n") + "\n#{verse}"
+    end
+
+    def masnavi
+      Array.new(8) { verse }.join("\n") + "\n#{verse}"
+    end
+
+    def quatrain
+      Array.new(4) { verse }
+    end
+  end
+end
+
+# Example usage:
+puts "Random Hafez-style Poetry Line:"
+puts HafezFaker.verse
+
+puts "\nRandom Hafez-style Ghazal (5 verses):"
+puts HafezFaker.ghazal
+
+puts "\nRandom Hafez-style Rubaiyat (4 verses):"
+puts HafezFaker.rubaiyat
+
+puts "\nRandom Hafez-style Masnavi (8 verses):"
+puts HafezFaker.masnavi
+
+puts "\nRandom Hafez-style Quatrain (4 verses):"
+puts HafezFaker.quatrain.join("\n")
+```
+
+In this example:
+
+    HafezFaker module provides methods to generate different types of Hafez-style poetry lines: verse, ghazal (5 verses), rubaiyat (4 verses), masnavi (8 verses), and quatrain (4 verses).
+
+    The verse method generates a single line of poetry using Faker's Lorem.sentence.
+
+    The ghazal, rubaiyat, masnavi, and quatrain methods generate longer poems by combining multiple verses.
+
+You'll need to have the Faker gem installed to use this code. You can install it by adding gem 'faker' to your Gemfile or running gem install faker.
