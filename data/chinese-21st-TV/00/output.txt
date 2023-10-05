@@ -1,0 +1,27 @@
+要实现这个功能，您可以定义一个类，并输出随机的姓名。下面是一个例子，假设已经安装了 faker gem：
+
+```ruby
+require 'faker'
+
+class WuxiaCharacter
+  NAMES = ['白展堂', '郭芙蓉', '佟湘玉', '莫小贝', 
+           '薛晓', '燕小六', '菜园子', '赵白眼', 
+           '贾诩', '金大虾', '石秀', '林风眠', 
+           '夜郎', '穆桂英']
+
+  def self.fake_name
+    Faker::Name.name_with_middle
+  end
+
+  def self.random_name
+    NAMES.sample
+  end
+end
+
+# 测试以上代码
+10.times do
+  puts WuxiaCharacter.random_name
+end
+```
+
+在上述代码中，创建了一个 WuxiaCharacter 类，其中 NAMES 数组存储了 “武林外传” 中的角色名字。每次

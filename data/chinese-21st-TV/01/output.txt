@@ -1,0 +1,39 @@
+首先，确保您已经安装了ruby-faker库。如果没有，可以使用以下命令安装：
+
+```ruby
+gem install faker
+```
+
+然后可以创建一个文件，比如"test_data_generator.rb"，并在其中添加以下代码：
+
+```ruby
+require 'faker'
+
+class WuxiaCharacterGenerator
+  NAMES = ["白展堂", "郭芙蓉", "佟湘玉", "白三娘", "燕小六", "莫小贝", "冯大堂", "花容易", "金大元", "佟愿", "巴龙日"]
+  NICKNAMES = ["九纹龙", "胖寡妇", "番木瓜", "肉包子", "金笔狼毫", "阿布", "铜锤", "花无缺", "金胡子", "牙将军", "哑巴老虎"]
+  JOBS = ["酒店老板", "店小二", "打铁匠", "和尚", "神秘人", "侠客", "医生", "商人", "书生", "士兵", "护林人"]
+
+  def self.generate
+    name = NAMES.sample
+    nickname = NICKNAMES.sample
+    job = JOBS.sample
+
+    puts "姓名: #{name}"
+    puts "外号: #{nickname}"
+    puts "职业: #{job}"
+  end
+end
+
+WuxiaCharacterGenerator.generate
+```
+
+在上述的代码中,我们首先定义了一些《武林外传》角色的姓名(NAMES)、外号(NICKNAMES)和职业(JOBS)数组。然后在 `generate` 方法中，我们从这些数组中随机提取一个姓名、外号和职业，然后输出它们。
+
+执行这个文件，你将会看到类似以下的输出：
+
+```ruby
+姓名: 冯大堂
+外号: 铜锤
+职业: 护林人
+```

@@ -1,0 +1,29 @@
+这是一个简单的示例代码，你可以根据需要进行修改和添加内容：
+
+```ruby
+require 'faker'
+
+class WuxiaJobGenerator
+  JOBS = ['掌门', '侠客', '厨师', '书童', '丐帮帮主', '书院讲师', '赌场老板', '剑侠', '店铺老板', '丫鬟', '山贼头目', '药铺伙计', '郡主', '皇帝', '阿飞'].freeze
+
+  def self.generate
+    Faker::Config.locale = 'zh-CN'
+    job = JOBS.sample
+    worker_name = Faker::Name.name
+    {
+      name: worker_name,
+      job: job,
+      city: Faker::Address.city
+    }
+  end
+end
+
+100.times do
+  data = WuxiaJobGenerator.generate
+  puts "姓名: #{data[:name]}, 职业: #{data[:job]}, 城市: #{data[:city]}"
+end
+```
+
+使用上述脚本将生成100条虚假的人员记录，包括姓名、工作和城市。每个人的工作都是随机选择的，《武林外传》的角色名称列表中的一个。同时，由于我们设置了地区为中国，所以生成的地址也是中国的城市名称。
+
+这个生成器只是一个示例，你可以根据你的需求进行修改，比如增加更多的《武林外传》角色，或者添加更多的字段等等。
