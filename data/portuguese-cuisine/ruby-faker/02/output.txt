@@ -1,0 +1,51 @@
+Sure, I can help with that. First, you need to install the faker gem if you haven't already. You can do this by adding `gem 'faker'` to your Gemfile and running `bundle install`.
+
+Here is a simple script that generates Portuguese-inspired recipes:
+
+```ruby
+require 'faker'
+
+class RecipeGenerator
+  def self.generate
+    {
+      title: "#{Faker::Food.dish} à la Portuguese",
+      ingredients: generate_ingredients,
+      instructions: generate_instructions,
+      prep_time: "#{rand(15..120)} minutes",
+      cook_time: "#{rand(30..180)} minutes",
+      serves: "#{rand(2..6)} people"
+    }
+  end
+
+  private
+
+  def self.generate_ingredients
+    ingredients = ['olive oil', 'garlic', 'onion', 'tomatoes', 'paprika', 'bay leaves', 'white wine', 'parsley']
+    rand(5..10).times do
+      ingredients << Faker::Food.ingredient
+    end
+    ingredients
+  end
+
+  def self.generate_instructions
+    instructions = []
+    rand(5..10).times do
+      instructions << Faker::Lorem.sentence(word_count: 10)
+    end
+    instructions
+  end
+end
+
+10.times do
+  recipe = RecipeGenerator.generate
+  puts "Title: #{recipe[:title]}"
+  puts "Ingredients: #{recipe[:ingredients].join(', ')}"
+  puts "Instructions: #{recipe[:instructions].join('. ')}"
+  puts "Preparation Time: #{recipe[:prep_time]}"
+  puts "Cooking Time: #{recipe[:cook_time]}"
+  puts "Serves: #{recipe[:serves]}"
+  puts "\n"
+end
+```
+
+This script generates 10 recipes with random ingredients and instructions. The ingredients include some common ones in Portuguese cuisine like olive oil, garlic, onion, tomatoes, paprika, bay leaves, white wine, and parsley, and the rest are randomly generated. The instructions are also randomly generated. The preparation and cooking times are random as well, ranging from 15 to 120 minutes and 30 to 180 minutes respectively. The number of people the recipe serves is also random, ranging from 2 to 6.
