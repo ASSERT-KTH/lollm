@@ -1,0 +1,29 @@
+很好，这是一个使用ruby和ruby-faker库，生成武林外传电视剧类伪造风格的例子。此代码会生成一些符合这个情节喜剧的人物外号：
+
+```ruby
+require 'faker'
+
+class WuxiaNickname
+  def initialize
+    @adjectives = ['独眼', '笑面', '八臂', '无影', '跛腿', '醉酒', '疯狂', '冷血', '独腿', '一指']
+    @nouns = ['龙', '虎', '鬼', '狼', '鹰', '蛇', '猴', '蝎', '狐狸', '蝴蝶']
+  end
+
+  def generate
+    adjective = @adjectives.sample
+    noun = @nouns.sample
+    "#{adjective}#{noun}"
+  end
+end
+
+10.times {
+  nickname = WuxiaNickname.new
+  puts nickname.generate
+}
+```
+
+这个程序定义了一个`WuxiaNickname`类。在这个类中，我们有两个数组，一个是形容词`@adjectives`（用来描述人物的某些特性），另一个是名词`@nouns`（用来表示武林世界中常见的动物或对象）。这两个数组一起组成了一个武林外传风格的人物外号。
+
+然后在`WuxiaNickname`类中，我们定义了一个方法`generate`。这个方法会随机挑选出一个形容词和一个名词，然后将它们组合起来生成一个新的人物外号。
+
+在最后的代码段中，我们创建了一个`WuxiaNickname`实例，并生成了10个随机的武林外传风格的人物外号。

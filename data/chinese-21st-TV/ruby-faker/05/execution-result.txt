@@ -1,0 +1,59 @@
+05.java:21: error: ';' expected
+        for (int i = 0; 一 i < 10; i++) {
+                         ^
+05.java:21: error: not a statement
+        for (int i = 0; 一 i < 10; i++) {
+                            ^
+05.java:21: error: ')' expected
+        for (int i = 0; 一 i < 10; i++) {
+                                ^
+05.java:21: error: ';' expected
+        for (int i = 0; 一 i < 10; i++) {
+                                     ^
+4 errors
+error: compilation failed
+
+
+## after another prompt:
+很抱歉关于这个错误，那应该是由于输入错误引起的。该行代码中的符号"一"需要被替换为"<"。下面是修正后的代码：
+
+```java
+import java.util.Random;
+
+public class NickNameGenerator {
+  
+    private Random random;
+    private static final String[] prefixes = {"远古", "狂拽", "无敌", "神秘", "夜袭", "穿云", "恶犬", "千面", "幽灵", "无影"};
+    private static final String[] nouns = {"大侠", "刀客", "侍", "骑士", "旋风", "箭", "旗", "斧", "蝶", "虹"};
+
+    public NickNameGenerator() {
+        this.random = new Random();
+    }
+
+    public String generateNickName() {
+        String prefix = prefixes[random.nextInt(prefixes.length)];
+        String noun = nouns[random.nextInt(nouns.length)];
+        return prefix + noun;
+    }
+
+    public static void main(String[] args) {
+        NickNameGenerator generator = new NickNameGenerator();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(generator.generateNickName());
+        }
+    }
+}
+```
+
+现在这段代码应该可以正常编译和运行了，再次抱歉给你带来的不便。
+
+神秘大侠
+夜袭骑士
+幽灵旗
+穿云旋风
+幽灵箭
+千面侍
+神秘虹
+无影箭
+神秘箭
+幽灵大侠
