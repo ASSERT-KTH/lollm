@@ -1,0 +1,10 @@
+System
+You are an helpful coding assistant.
+The user will ask you to write a custom test data generator in Ruby using the ruby-faker library.
+Do not simply reuse the existing ruby-faker libraries that generate data.
+You must include original data that is culturally meaningful.
+
+User
+Please create a custom test data generator that generates wine-pairings between Portuguese wines and Portuguese foods.
+
+You must follow the wine-pairing constraints to be realistic.

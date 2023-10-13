@@ -1,0 +1,50 @@
+Sure, here is a simple custom test data generator in Ruby that generates wine-pairings between Portuguese wines and Portuguese foods. It uses the ruby-faker library to generate random Portuguese names for the wines and foods.
+
+First, install the faker gem if you haven't already:
+
+```ruby
+gem install faker
+```
+
+Then, here is the code:
+
+```ruby
+require 'faker'
+
+# List of Portuguese wines
+portuguese_wines = [
+  'Vinho Verde',
+  'Vinho Alvarinho',
+  'Vinho do Douro',
+  'Vinho do Alentejo',
+  'Vinho da Bairrada',
+  'Vinho da Madeira',
+  'Porto'
+]
+
+# List of Portuguese foods
+portuguese_foods = [
+  'Bacalhau a Bras',
+  'Arroz de Pato',
+  'Feijoada Trasmontana',
+  'Alheira de Mirandela',
+  'Caldo Verde',
+  'Francesinha',
+  'Pastel de Nata'
+]
+
+# Function to generate wine-food pairings
+def generate_pairings(wines, foods)
+  wines.each do |wine|
+    food = foods.sample
+    puts "Wine: #{wine}, Food: #{food}"
+  end
+end
+
+# Generate pairings
+generate_pairings(portuguese_wines, portuguese_foods)
+```
+
+This script will output a list of wine-food pairings, where each wine is paired with a random food from the list. If you want to generate different pairings, simply run the script again.
+
+Please note that the pairings are arbitrary and may not represent actual recommended pairings between the wines and foods.

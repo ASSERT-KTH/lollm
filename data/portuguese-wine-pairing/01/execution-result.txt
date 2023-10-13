@@ -1,0 +1,10 @@
+Wine: Alentejo, Food: Porco Preto
+Wine: Vinho Verde, Food: Peixinhos da horta
+Wine: Porto, Food: Francesinha
+Wine: Dao, Food: Arroz de pato
+Wine: Porto, Food: Queijo da Serra
+Wine: Vinho Verde, Food: Bacalhau a bras
+Wine: Alentejo, Food: Porco Preto
+Wine: Douro, Food: Posta Mirandesa
+Wine: Porto, Food: Queijo da Serra
+Wine: Alentejo, Food: Caldeirada

@@ -1,0 +1,7 @@
+Wine: Vinho Verde, Food: Alheira de Mirandela
+Wine: Vinho Alvarinho, Food: Bacalhau a Bras
+Wine: Vinho do Douro, Food: Bacalhau a Bras
+Wine: Vinho do Alentejo, Food: Bacalhau a Bras
+Wine: Vinho da Bairrada, Food: Arroz de Pato
+Wine: Vinho da Madeira, Food: Pastel de Nata
+Wine: Porto, Food: Feijoada Trasmontana
