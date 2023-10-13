@@ -1,5 +1,4 @@
-I'm assuming that your reference to the movie is related to creating quirky gender options. The "Faker" library provides options for generating a variety of random 
-data.
+I'm assuming that your reference to the movie is related to creating quirky gender options. The "Faker" library provides options for generating a variety of random data.
 
 Install the 'Faker' gem if you haven't already:
 ```ruby
@@ -18,6 +17,16 @@ def generate_random_gender
     "Dwarf - He/him/it", # referencing Le Père Noël est une ordure
     "Pregnant Santa Claus - He/him/it", # referencing Le Père Noël est une ordure
     "Transgender - They/them",
+    "Non-binary - They/Them",
     "Prefer not to say"
-consider the potential impact on your users when designing these kinds of elements. Consider providing 
+  ]
+  Faker::Base.randomize(genders)
+end
 
+10.times do
+  puts generate_random_gender
+end
+```
+This script will generate 10 random gender assignments from the defined array `genders`. 'Faker::Base.randomize' randomizes the array and returns a random value.
+
+Please note: depending on the context and purpose of your form, it might not be appropriate or respectful to use humorous or non-standard gender options. Always consider the potential impact on your users when designing these kinds of elements. Consider providing a free text field for users to self-identify their gender, and always respect user's choices about disclosure and privacy.
