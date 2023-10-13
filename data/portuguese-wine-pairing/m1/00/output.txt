@@ -1,0 +1,31 @@
+1. Vinho: Vinho Verde
+   Comida: Sardinhas Assadas
+
+2. Vinho: Vinho do Douro
+   Comida: Cozido à Portuguesa
+
+3. Vinho: Vinho Alentejano
+   Comida: Porco Preto
+
+4. Vinho: Vinho da Bairrada
+   Comida: Leitão da Bairrada
+
+5. Vinho: Vinho do Dão
+   Comida: Cabrito Assado
+
+6. Vinho: Vinho do Porto
+   Comida: Queijo da Serra da Estrela
+
+7. Vinho: Vinho da Madeira
+   Comida: Espetada Madeirense
+
+8. Vinho: Vinho de Setúbal
+   Comida: Choco Frito
+
+9. Vinho: Vinho de Trás-os-Montes
+   Comida: Alheira de Mirandela
+
+10. Vinho: Vinho de Lisboa
+    Comida: Pastéis de Belém
+
+Lembre-se que as combinações de vinho e comida são altamente subjetivas e podem variar de acordo com o paladar individual. As sugestões acima são baseadas em combinações tradicionais e populares em Portugal.
