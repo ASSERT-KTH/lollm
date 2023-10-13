@@ -14,7 +14,9 @@ touch $DIR/assessment.json
 cat > $DIR/assessment.json << EOF
 {
  "model":"",
+ "prompt_type": "<m1/m2,m3>",
  "data_constraints_can_be_checked": "",
+ "executable_data_contstraints": "yes/no",
  "number_of_options_in_the_generators": "",
  "cultural_alignment": "",
  "cultural_alignment_quantitative": "",
