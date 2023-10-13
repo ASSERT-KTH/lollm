@@ -1,0 +1,44 @@
+First, you need to install the faker gem if you haven't yet. You can do this by running `gem install faker` in your terminal.
+
+After that, here's a basic script that generates wine and food pairings for Portuguese cuisine:
+
+```ruby
+require 'faker'
+
+class PortuguesePairingGenerator
+  PORTUGUESE_WINES = {
+    'Vinho Verde' => :white,
+    'Alvarinho' => :white,
+    'Vinho Alentejo' => :red,
+    'Porto' => :red,
+    'Madeira' => [:red, :white]
+  }
+
+  PORTUGUESE_FOODS = {
+    'Bacalhau a bras' => :fish,
+    'Caldo verde' => :vegetable,
+    'Francesinha' => :meat,
+    'Arroz de Pato' => :meat,
+    'Sardinhas assadas' => :fish
+  }
+
+  def self.generate
+    wine, type = PORTUGUESE_WINES.to_a.sample
+    food, food_type = PORTUGUESE_FOODS.to_a.sample
+
+    # Pair white wine with fish and red wine with meat
+    if (type == :white && food_type == :fish) || (type == :red && food_type == :meat)
+      puts "Pair the #{wine} wine with #{food}."
+    else
+      generate
+    end
+  end
+end
+
+# Generate a pairing
+PortuguesePairingGenerator.generate
+```
+
+This script defines a class `PortuguesePairingGenerator` with a class method `generate` that generates a wine and food pairing. The pairing is done according to the type of the wine and the food. White wines are paired with fish dishes and red wines are paired with meat dishes. 
+
+Please note that the wine and food pairings in this script are simplified and may not accurately represent the complexity of Portuguese cuisine and wine pairing rules.

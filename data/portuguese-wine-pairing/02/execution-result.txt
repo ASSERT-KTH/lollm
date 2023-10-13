@@ -1,0 +1,20 @@
+irb(main):134:0> PortuguesePairingGenerator.generate
+Pair the Vinho Verde wine with Bacalhau a bras.
+=> nil
+irb(main):135:0> PortuguesePairingGenerator.generate
+Pair the Alvarinho wine with Bacalhau a bras.
+=> nil
+irb(main):136:0> PortuguesePairingGenerator.generate
+Pair the Vinho Verde wine with Bacalhau a bras.
+=> nil
+irb(main):137:0> PortuguesePairingGenerator.generate
+Pair the Porto wine with Arroz de Pato.
+=> nil
+irb(main):138:0> PortuguesePairingGenerator.generate
+Pair the Alvarinho wine with Sardinhas assadas.
+=> nil
+irb(main):139:0> PortuguesePairingGenerator.generate
+Pair the Alvarinho wine with Sardinhas assadas.
+=> nil
+irb(main):140:0> PortuguesePairingGenerator.generate
+Pair the Vinho Alentejo wine with Francesinha.
