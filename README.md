@@ -19,6 +19,7 @@ Example of `assessment.json`:
 # enumerates all possible combinations
 # can be infinity / uncomputable is some cases
  "model": "<gpt35/gpt4>",
+ "prompt_type": "<m1/m2,m3>", # data only, code, code+library
  "data_constraints_can_be_checked": "function in the repo",
  "number_of_options_in_the_generators": "<hard fact>",
  "cultural_alignment": "<likert scale 0-5>", # overall subjective assessment with expertise
