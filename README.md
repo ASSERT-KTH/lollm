@@ -18,7 +18,7 @@ Example of `assessment.json`:
  "model": "<gpt35/gpt4>",
  "prompt_type": "<m1/m2,m3>", # data only, code, code+library
  "data_constraints_can_be_checked": "function in the repo",
- "executable_data_contstraints": "yes/np", # only for M2/M3
+ "executable_data_constraints": "yes/np", # only for M2/M3
  "number_of_options_in_the_generators": "<hard fact>",
  "cultural_alignment": "<likert scale 0-5>", # overall subjective assessment with expertise
  "cultural_alignment_quantitative": "<~ correct / number_of_options_in_the_generators",
