@@ -1,11 +1,12 @@
 {
     "model":"gpt4",
+    "prompt_type":"m3",
     "data_constraints_can_be_checked": "no",
+    "executable_data_constraints": "no",
     "number_of_options_in_the_generators": "10",
     "cultural_alignment": "1",
     "cultural_alignment_quantitative": "0",
     "executes": "yes",
-    "execute_error": "",
     "contains_true_generator":"yes",
     "comments":"None of the generated song titles are 100% accurate, but a few of the titles have similar wording to some real song titles."
 }

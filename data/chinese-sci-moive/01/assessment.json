@@ -1,6 +1,8 @@
 {
  "model":"gpt4",
+ "prompt_type":"m3",
  "data_constraints_can_be_checked": "n-a",
+ "executable_data_constraints": "no",
  "number_of_options_in_the_generators": "5",
  "cultural_alignment": "4",
  "cultural_alignment_quantitative": "4/5=0.8",

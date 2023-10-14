@@ -1,11 +1,12 @@
 {
     "model":"gpt4",
+    "prompt_type":"m3",
     "data_constraints_can_be_checked": "no",
+    "executable_data_constraints": "no",
     "number_of_options_in_the_generators": "3",
     "cultural_alignment": "0",
     "cultural_alignment_quantitative": "0",
     "executes": "yes",
-    "execute_error": "",
     "contains_true_generator":"yes",
     "comments":"It does not find any accurate personal name from the song"
 }

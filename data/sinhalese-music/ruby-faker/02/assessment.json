@@ -1,11 +1,12 @@
 {
     "model":"gpt4",
-    "data_constraints_can_be_checked": "n-a",
+    "prompt_type":"m3",
+    "data_constraints_can_be_checked": "no",
+    "executable_data_constraints": "no",
     "number_of_options_in_the_generators": "4",
     "cultural_alignment": "4",
     "cultural_alignment_quantitative": "1",
     "executes": "yes",
-    "execute_error": "",
     "contains_true_generator":"yes",
     "comments":"Identifies all the names from the lyrics accurately (except for a small spelling mistake). But the words with the meanings 'brother' or 'sister' are also considered as names. Since in Sri Lankan culture, it is normal to use 'brother' or 'sister' along with the name, we can consider the results as accurate."
 }
