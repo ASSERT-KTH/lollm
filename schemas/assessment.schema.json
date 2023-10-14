@@ -1,41 +1,53 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://github.com/ASSERT-KTH/lollm//blob/main/schemas/assessment.schema.json",
-    "type": "object",
-    "properties": {
-      "model": {
-        "type": "string"
-      },
-      "data_constraints_can_be_checked": {
-        "type": "string",
-        "enum": ["yes", "no", "n-a"]
-      },
-      "number_of_options_in_the_generators": {
-        "type": "string"
-      },
-      "cultural_alignment": {
-        "type": "string",
-        "pattern": "^[0-5]+$"
-      },
-      "cultural_alignment_quantitative": {
-        "type": "string"
-      },
-      "executes": {
-        "type": "string",
-        "enum": ["yes", "no"]
-      },
-      "execute_error": {
-        "type": "string"
-      },
-      "contains_true_generator": {
-        "type": "string",
-        "enum": ["yes", "no"]
-      },
-      "comments": {
-        "type": "string"
-      }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ASSERT-KTH/lollm//blob/main/schemas/assessment.schema.json",
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string"
     },
-    "required": ["model", "data_constraints_can_be_checked", "number_of_options_in_the_generators", "cultural_alignment", 
-    "cultural_alignment_quantitative", "executes", "contains_true_generator"]
+    "prompt_type": {
+      "type": "string",
+      "enum": ["m1", "m2", "m3"]
+    },
+    "data_constraints_can_be_checked": {
+      "type": "string",
+      "enum": ["yes", "no", "n-a"]
+    },
+    "executable_data_constraints": {
+      "type": "string",
+      "enum": ["yes", "no"]
+    },
+    "number_of_options_in_the_generators": {
+      "type": "string"
+    },
+    "cultural_alignment": {
+      "type": "string",
+      "pattern": "^[0-5]+$"
+    },
+    "cultural_alignment_quantitative": {
+      "type": "string"
+    },
+    "executes": {
+      "type": "string",
+      "enum": ["yes", "no"]
+    },
+    "execute_error": {
+      "type": "string"
+    },
+    "contains_true_generator": {
+      "type": "string",
+      "enum": ["yes", "no"]
+    },
+    "comments": {
+      "type": "string"
+    }
+  },
+  "required": ["model", "prompt_type", "cultural_alignment", "executes", "contains_true_generator"],
+  "if": {
+    "properties": { "prompt_type": { "enum": ["m2", "m3"] } }
+  },
+  "then": {
+    "required": ["executable_data_constraints"]
   }
-  
+}

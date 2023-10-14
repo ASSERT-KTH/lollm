@@ -17,26 +17,62 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
 
-    - name: Set global validation_failed variable
-      id: set_validation_failed
-      run: echo "validation_failed=false" >> $GITHUB_ENV
+    - name: Set variables
+      run: |
+        echo "folder_name_validation_failed=false" >> $GITHUB_ENV
+        echo "file_validation_failed=false" >> $GITHUB_ENV
 
-    - name: Check data folder
+
+    - name: Validate data folder structure
       run: |
         # Navigate to the data folder
         cd data
 
         # Check if the subfolders and sub-subfolders are correctly named
-        find . -type d -exec sh -c 'dir="{}"; if [ "$(ls -A "$dir" | wc -l)" -eq 0 ]; then if ! [[ "$(basename "$dir")" =~ ^[0-9][0-9]$ ]]; then echo "Invalid folder name: $dir"; echo "validation_failed=true" >> $GITHUB_ENV; fi; fi' \; 
+
+        find . -type d -name '[0-9][0-9]' -exec sh -c 'dir="{}"; 
+        parent_dir=$(dirname "$dir"); 
+        if [ "$(basename "$parent_dir")" != "m1" ] && [ "$(basename "$parent_dir")" != "m2" ]; then
+          case "$(basename "$parent_dir")" in
+            *-faker)
+              ;;
+            *)
+              echo "Invalid folder name: $parent_dir"
+              echo "folder_name_validation_failed=true" >> $GITHUB_ENV
+              ;;
+          esac
+        fi' \;
+        
+        find . -type d -exec sh -c 'dir="{}"; 
+        if [ -z "$(find "$dir" -mindepth 1 -type d)" ] && [ -n "$(find "$dir" -mindepth 1 -type f)" ]; then 
+          if ! echo "$(basename "$dir")" | grep -E '^[0-9][0-9]$' >/dev/null; then 
+            echo "Invalid folder name: $dir"; 
+            echo "folder_name_validation_failed=true" >> $GITHUB_ENV; 
+          fi
+        fi' \; 
 
         # Check for required files in the sub data folders
-        find . -type d -name '[0-9][0-9]' -exec sh -c 'dir="{}"; if [ ! -f "$dir/prompt.txt" ] || [ ! -f "$dir/output.txt" ] || [ ! -f "$dir/execution-result.txt" ] || [ ! -f "$dir/assessment.json" ]; then echo "Missing files in folder: $dir"; echo "validation_failed=true" >> $GITHUB_ENV; fi' \;
-
+        find . -type d -name '[0-9][0-9]' -exec sh -c 'dir="{}"; 
+        missing_files=""; 
+        if [ ! -f "$dir/prompt.txt" ]; then missing_files="$missing_files prompt.txt"; fi; 
+        if [ ! -f "$dir/output.txt" ]; then missing_files="$missing_files output.txt"; fi; 
+        if [ ! -f "$dir/execution-result.txt" ]; then missing_files="$missing_files execution-result.txt"; fi; 
+        if [ ! -f "$dir/assessment.json" ]; then missing_files="$missing_files assessment.json"; fi; 
+        if [ -n "$missing_files" ]; then 
+          echo "Missing files in folder: $dir - $missing_files"; 
+          echo "file_validation_failed=true" >> $GITHUB_ENV; 
+        fi' \;
+        
     - name: Finalize workflow
       run: |
-        if [ "${{ env.validation_failed }}" = "true" ]; then
-          echo "Validation failed."
-          exit 1
-        else
-          echo "Validation succeeded."
+        if [ "${{ env.folder_name_validation_failed }}" = "true" ]; then
+          echo "Validation failed due to invalid folder names inside the data folder."
         fi
+        if [ "${{ env.file_validation_failed }}" = "true" ]; then
+          echo "Some required files are missing inside the data folder."
+        fi
+        if [ "${{ env.folder_name_validation_failed }}" = "true" ] || [ "${{ env.file_validation_failed }}" = "true" ]; then
+          echo "Check the log messages in the previous step for more details."
+          exit 1
+        fi
+        echo "Validation succeeded."
