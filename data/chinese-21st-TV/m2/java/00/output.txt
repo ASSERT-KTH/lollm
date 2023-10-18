@@ -1,0 +1,37 @@
+了解，我将为你创建一个简单的武林外传风格的角色名生成器。
+
+首先，我们可以考虑武林外传中的命名特点，结合武侠文化中的常见元素和词汇来生成。为了简化过程，我会创建一个固定的前缀和后缀列表，然后从这两个列表中随机组合来生成角色名。
+
+以下是一个简单的Java代码来完成这个任务：
+
+```java
+import java.util.Random;
+
+public class WuxiaNameGenerator {
+
+    private static final String[] PREFIXES = {
+        "风", "雨", "云", "霜", "雪", "月", "夜", "星", "山", "水"
+    };
+
+    private static final String[] SUFFIXES = {
+        "剑", "影", "鹰", "狼", "龙", "凤", "花", "叶", "露", "石"
+    };
+
+    private Random random = new Random();
+
+    public String generateName() {
+        String prefix = PREFIXES[random.nextInt(PREFIXES.length)];
+        String suffix = SUFFIXES[random.nextInt(SUFFIXES.length)];
+        return prefix + suffix;
+    }
+
+    public static void main(String[] args) {
+        WuxiaNameGenerator generator = new WuxiaNameGenerator();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(generator.generateName());
+        }
+    }
+}
+```
+
+运行上面的代码，你可以得到10个武侠风格的角色名。每次运行的结果可能会有所不同，因为它是随机生成的。

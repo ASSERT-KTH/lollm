@@ -1,0 +1,49 @@
+好的，我会用 Rust 来为《武林外传》生成十个合适的武林门派名字。
+
+首先，我会用 Rust 的 `rand` crate 来生成随机数。我们可以先构建一个基本的结构体，然后使用组合的方式来生成门派名称。例如，我们可以设定一些前缀、中缀和后缀，然后随机组合它们以创建门派名字。
+
+以下是一段示例代码，展示如何生成这些门派名字：
+
+```rust
+extern crate rand;
+
+use rand::seq::SliceRandom;
+use rand::Rng;
+
+struct MartialArtsSect {
+    prefix: Vec<&'static str>,
+    infix: Vec<&'static str>,
+    suffix: Vec<&'static str>,
+}
+
+impl MartialArtsSect {
+    fn new() -> Self {
+        MartialArtsSect {
+            prefix: vec!["天", "地", "玄", "黄", "霹雳", "九阳", "九阴", "万象", "风雷", "冰火"],
+            infix: vec!["龙", "凤", "虎", "豹", "雄", "雌", "神", "魔", "仙", "鬼"],
+            suffix: vec!["派", "宫", "堂", "门", "社", "会", "教", "阵", "帮", "群"],
+        }
+    }
+
+    fn generate_sect_name(&self) -> String {
+        let mut rng = rand::thread_rng();
+        let p = self.prefix.choose(&mut rng).unwrap_or(&"");
+        let i = self.infix.choose(&mut rng).unwrap_or(&"");
+        let s = self.suffix.choose(&mut rng).unwrap_or(&"");
+        format!("{}{}{}", p, i, s)
+    }
+}
+
+fn main() {
+    let generator = MartialArtsSect::new();
+    for _ in 0..10 {
+        println!("{}", generator.generate_sect_name());
+    }
+}
+```
+
+这段代码定义了一个 `MartialArtsSect` 结构体，其中包含三个字符串数组，分别是前缀、中缀和后缀。`generate_sect_name` 方法会从这三个数组中随机选择元素，并将它们组合成一个门派名字。
+
+运行 `main` 函数将打印出十个随机生成的门派名字。
+
+注意：为了运行此代码，你需要将 `rand` crate 添加到你的 `Cargo.toml` 文件中。

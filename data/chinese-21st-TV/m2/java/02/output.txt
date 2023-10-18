@@ -1,0 +1,40 @@
+好的，首先我们可以考虑"武林外传"这部电视剧的背景，它是一部古装武侠喜剧，所以所产生的职业需要与古代和武侠题材相匹配。
+
+这里是一个简单的Java程序，它包含了一个预定义的职业列表，并从中随机选择10个职业来生成：
+
+```java
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Random;
+
+public class WuLinOccupationGenerator {
+    private static final String[] occupations = {
+        "镖头", "草药商", "捕快", "江湖医生", "书生", 
+        "酒馆老板", "打铁匠", "剑宗弟子", "丐帮弟子", "鱼贩",
+        "茶馆掌柜", "马贩", "画师", "戏班子演员", "宝石商"
+    };
+
+    public static void main(String[] args) {
+        WuLinOccupationGenerator generator = new WuLinOccupationGenerator();
+        List<String> generatedOccupations = generator.generate(10);
+        for (String occupation : generatedOccupations) {
+            System.out.println(occupation);
+        }
+    }
+
+    public List<String> generate(int count) {
+        HashSet<String> resultSet = new HashSet<>();
+        Random rand = new Random();
+
+        while (resultSet.size() < count) {
+            int index = rand.nextInt(occupations.length);
+            resultSet.add(occupations[index]);
+        }
+
+        return new ArrayList<>(resultSet);
+    }
+}
+```
+
+当你运行此程序时，它将从预定义的职业列表中随机选择10个职业并打印出来。这只是一个简单的示例，你可以根据需要进一步扩展或修改它。

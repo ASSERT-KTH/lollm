@@ -1,0 +1,31 @@
+好的，首先，我想说Rust是一个非常强大的系统编程语言，但它不是最适合文本生成的工具。不过，我会尽量用Rust来实现这个功能。
+
+为了生成"武林外传"风格的建筑名，我们可以使用一些与古代武侠小说和电影相关的词汇来进行组合。这些词汇可以分为前缀、中缀和后缀，我们可以随机地组合这些词汇来生成新的建筑名。
+
+以下是我为"武林外传"风格的建筑名提供的Rust代码：
+
+```rust
+use rand::seq::SliceRandom;
+use rand::thread_rng;
+
+fn main() {
+    let prefixes = vec!["玉", "金", "银", "龙", "白", "黑", "天", "地"];
+    let infixes = vec!["翠", "霜", "风", "雨", "月", "星", "云", "雪"];
+    let suffixes = vec!["阁", "楼", "庙", "寺", "馆", "院", "洞", "塔"];
+
+    let mut rng = thread_rng();
+
+    for _ in 0..10 {
+        let prefix = prefixes.choose(&mut rng).unwrap();
+        let infix = infixes.choose(&mut rng).unwrap();
+        let suffix = suffixes.choose(&mut rng).unwrap();
+
+        let building_name = format!("{}{}{}", prefix, infix, suffix);
+        println!("{}", building_name);
+    }
+}
+```
+
+你可以安装和使用Rust的工具链（如`cargo`）来运行上述代码。当你运行这段代码时，它会为"武林外传"风格的建筑名生成10个随机名称。
+
+请注意，为了能够运行这段代码，你需要在你的`Cargo.toml`文件中加入`rand`库作为依赖。
