@@ -1,0 +1,23 @@
+好的，这是一个简单的脚本，会根据给定的词汇，使用随机函数来生成角色的称号。
+
+使用Python自带的random模块开发。
+
+```python
+import random
+
+# 武侠世界常见的前缀和后缀
+prefixes = ["无影", "飞燕", "铁石", "破虏", "饮血", "笑面", "追魂", "血刀", "洛阳"]
+suffixes = ["剑", "鹰", "手", "客", "狼", "虎", "龙", "侠", "者"]
+
+# 定义函数来生成随机称号
+def generate_title():
+    prefix = random.choice(prefixes)
+    suffix = random.choice(suffixes)
+    return prefix + suffix
+
+# 打印十个随机生成的称号
+for i in range(10):
+    print(generate_title())
+```
+
+运行这段代码，你将会得到像"飞燕剑"、"笑面虎"这样的称号。每次运行的结果都会变化，都是随机生成的。

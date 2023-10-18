@@ -1,0 +1,12 @@
+{
+ "model":"gpt4",
+ "prompt_type": "m1", # mandatory, data only, code, code+library
+ "data_constraints_can_be_checked": "n-a",
+ "number_of_options_in_the_generators": "10",
+ "cultural_alignment": "4",
+ "cultural_alignment_quantitative": "7/10=0.7",
+ "executes": "-",
+ "execute_error": "-",
+ "contains_true_generator":"-",
+ "comments":"The name generated is okay, but some of them are used in other novels or TV shows."
+}

@@ -1,0 +1,12 @@
+{
+ "model":"gpt4",
+ "prompt_type": "m2", # mandatory, data only, code, code+library
+ "data_constraints_can_be_checked": "n-a",
+ "number_of_options_in_the_generators": "10",
+ "cultural_alignment": "0",
+ "cultural_alignment_quantitative": "0/10=0",
+ "executes": "yes",
+ "execute_error": "yes",
+ "contains_true_generator":"yes",
+ "comments":"The store name generated don't make sense"
+}

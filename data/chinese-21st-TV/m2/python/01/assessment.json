@@ -1,11 +1,12 @@
 {
  "model":"gpt4",
+ "prompt_type": "m2", # mandatory, data only, code, code+library
  "data_constraints_can_be_checked": "n-a",
  "number_of_options_in_the_generators": "10",
- "cultural_alignment": "5",
+ "cultural_alignment": "10",
  "cultural_alignment_quantitative": "10/10=1",
  "executes": "yes",
  "execute_error": "yes",
  "contains_true_generator":"yes",
- "comments":"The code contains `for (int i = 0; 一 i < 10; i++) {` which has a wierd '一'. It works well after another prompt is added."
+ "comments":"The place name generated makes sense"
 }

@@ -1,0 +1,12 @@
+{
+ "model": "gpt4", # mandatory
+ "prompt_type": "m2", # mandatory, data only, code, code+library
+ "data_constraints_can_be_checked": "na",
+ "executable_data_constraints": "np", # mandatory only for M2/M3
+ "number_of_options_in_the_generators": "17", # optional
+ "cultural_alignment": "17", # mandatory overall subjective assessment with expertise
+ "cultural_alignment_quantitative": "17/17=1", # optional
+ "executes": "yes", # mandatory
+ "contains_true_generator":"yes",
+ "comments":"The jobs generated are quite good."
+}
