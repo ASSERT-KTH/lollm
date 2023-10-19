@@ -28,5 +28,5 @@ Example of `assessment.json`:
 }
 ```
 
-About the `"number_of_options_in_the_generators"`, it is the number of possible data items done by the generators, for cominations it consists of the  enumeration of all possible combinations, it might be infinity / uncomputable is some cases.
+About the `"number_of_options_in_the_generators"`, it is the number of possible data items done by the generators, for cominations it consists of the  enumeration of all possible combinations, it might be infinity / uncomputable is some cases. ^-^
 
