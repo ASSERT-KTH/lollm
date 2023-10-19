@@ -17,6 +17,7 @@ Example of `assessment.json`:
 {
  "model": "<gpt35/gpt4>", # mandatory
  "prompt_type": "<m1/m2,m3>", # mandatory, data only, code, code+library
+ "prompt_language": "<x eg en>", # optional, an iso 2 character language symbol, eg "en" or "sv"
  "data_constraints_can_be_checked": " optional function in the repo",
  "executable_data_constraints": "yes/np", # mandatory only for M2/M3
  "number_of_options_in_the_generators": "<hard fact>", # optional
