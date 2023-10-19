@@ -1,0 +1,38 @@
+Claro, vou gerar um pseudocódigo fictício para ilustrar como isso poderia ser implementado com o ruby-faker:
+
+```ruby
+# um módulo de extensão para faker que lidará com vinhos e comidas portugueses
+module Faker
+  class Portuguesa < Base
+
+    class << self
+
+      def wine_and_food_pairing
+        "#{wine} é um excelente par para #{food}."
+      end
+
+    private
+
+      # uma lista fictícia de vinhos portugueses 
+      def wine
+        fetch('portuguesa.wine')
+      end
+
+      # uma lista fictícia de pratos típicos portugueses
+      def food
+        fetch('portuguesa.food')
+      end
+    end
+  end
+end
+```
+Depois terias que adicionar informações de vinhos e pratos típicos portugueses ao léxico do Faker. Aqui está um exemplo de como você pode fazer isso:
+
+```yaml
+en:
+  faker:
+    portuguesa:
+      wine: ["Vinho Verde", "Vinho do Douro", "Vinho do Alentejo", "Vinho do Dão", "Vinho da Bairrada", "Vinho da Madeira"]
+      food: ["Bacalhau à Brás", "Francesinha", "Alheira de Mirandela", "Polvo à Lagareiro", "Cozido à Portuguesa", "Arroz de Pato"]
+```
+Assim, quando você chama `Faker::Portuguesa.wine_and_food_pairing`, ele gera uma frase com um par de vinhos e alimentos portugueses.
