@@ -1,9 +1,9 @@
 {
     "model": "gpt4",
     "prompt_type": "m1",
+    "prompt_language": "PT",
     "data_constraints_can_be_checked": "yes",
     "executable_data_constraints": "no",
-    "language": "Portuguese",
     "number_of_options_in_the_generators": "10",
     "cultural_alignment": "5",
     "cultural_alignment_quantitative": "10/10",
