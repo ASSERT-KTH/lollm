@@ -1,0 +1,1 @@
+Dame una lista de jugadores falsos de futbol de Latino America, que incluya equipo, nacionalidad, posicion, y un superpoder inutil pero muy gracioso 
