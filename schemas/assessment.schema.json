@@ -10,6 +10,9 @@
       "type": "string",
       "enum": ["m1", "m2", "m3"]
     },
+    "prompt_language" : {
+      "type": "string"
+    },
     "data_constraints_can_be_checked": {
       "type": "string",
       "enum": ["yes", "no", "n-a"]
@@ -43,11 +46,11 @@
       "type": "string"
     }
   },
-  "required": ["model", "prompt_type", "cultural_alignment", "executes", "contains_true_generator"],
+  "required": ["model", "prompt_type", "cultural_alignment"],
   "if": {
     "properties": { "prompt_type": { "enum": ["m2", "m3"] } }
   },
   "then": {
-    "required": ["executable_data_constraints"]
+    "required": ["executable_data_constraints", "executes", "contains_true_generator"]
   }
 }
