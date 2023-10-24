@@ -1,0 +1,9 @@
+{
+    "model": "gpt4",
+    "prompt_type": "m1",
+    "prompt_language": "EN",
+    "data_constraints_can_be_checked": "no",
+    "cultural_alignment": "2",
+    "cultural_alignment_quantitative": "4/10",
+    "comments":""
+}
