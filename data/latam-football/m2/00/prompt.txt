@@ -1,0 +1,5 @@
+Crea un generador de datos de prueba que genere jugadores de fútbol falsos de América Latina.
+
+Cada dato debe incluir un nombre, un apodo, un equipo, una nacionalidad y una estadística irrelevante pero divertida.
+
+El generador esta escrito en python pero no debe usar ninguna libreria externa

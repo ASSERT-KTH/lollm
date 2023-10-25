@@ -1,0 +1,10 @@
+{'nombre': 'Diego Lopez', 'apodo': 'El inmortal', 'equipo': 'Colo Colo', 'nacionalidad': 'Argentina', 'estadistica_divertida': 'Colecciona medias de fútbol'}
+{'nombre': 'Miguel Gonzalez', 'apodo': 'El rapidito', 'equipo': 'Americade Cali', 'nacionalidad': 'Brasil', 'estadistica_divertida': 'Colecciona medias de fútbol'}
+{'nombre': 'Gabriel Rojas', 'apodo': 'La muralla', 'equipo': 'Americade Cali', 'nacionalidad': 'Perú', 'estadistica_divertida': 'Es el campeón de tango en su barrio'}
+{'nombre': 'Diego Garcia', 'apodo': 'El matador', 'equipo': 'Nacional de Uruguay', 'nacionalidad': 'Uruguay', 'estadistica_divertida': 'Colecciona medias de fútbol'}
+{'nombre': 'Santiago Gonzalez', 'apodo': 'El pulpo', 'equipo': 'Boca Juniors', 'nacionalidad': 'Brasil', 'estadistica_divertida': 'Ha comido 1000 empanadas en su vida'}
+{'nombre': 'Ricardo Ramirez', 'apodo': 'El matador', 'equipo': 'Nacional de Uruguay', 'nacionalidad': 'Paraguay', 'estadistica_divertida': 'Le tiene miedo a los perros'}
+{'nombre': 'Luis Rojas', 'apodo': 'El campeón', 'equipo': 'San Lorenzo', 'nacionalidad': 'Paraguay', 'estadistica_divertida': 'Tiene un tatuaje de su mascota en el brazo'}
+{'nombre': 'Diego Perez', 'apodo': 'El rapidito', 'equipo': 'San Lorenzo', 'nacionalidad': 'Uruguay', 'estadistica_divertida': 'Tiene un tatuaje de su mascota en el brazo'}
+{'nombre': 'Juan Gonzalez', 'apodo': 'El matador', 'equipo': 'River Plate', 'nacionalidad': 'Chile', 'estadistica_divertida': 'Colecciona medias de fútbol'}
+{'nombre': 'Miguel Ramirez', 'apodo': 'La muralla', 'equipo': 'Independiente', 'nacionalidad': 'Bolivia', 'estadistica_divertida': 'Colecciona medias de fútbol'}
