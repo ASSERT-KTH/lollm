@@ -1,0 +1,3 @@
+[0] >>> generate a leap year special date
+
+February 29th, 2000
