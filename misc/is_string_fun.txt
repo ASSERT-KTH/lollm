@@ -1,0 +1,28 @@
+write a python function for validating that a string is fun
+
+Here's a Python function that validates whether a string is "fun":
+
+```python
+def validate_string_is_fun(string):
+    # Check if the string is empty
+    if not string:
+        return False
+    
+    # Check if the string contains the word "fun"
+    if "fun" not in string.lower():
+        return False
+    
+    return True
+```
+
+Here's how you can use this function to validate a string:
+
+```python
+string = "Python is fun!"
+if validate_string_is_fun(string):
+    print("The string is fun!")
+else:
+    print("The string is not fun.")
+```
+
+
