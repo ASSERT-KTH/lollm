@@ -1,0 +1,26 @@
+prompt: write a python function for validating that a phone number is formatted in the french way?
+
+Here's a Python function that validates whether a phone number is formatted in the French way:
+
+```python
+import re
+
+def validate_french_phone_number(phone_number):
+    # Remove any non-digit characters from the phone number
+    phone_number = re.sub(r'\D', '', phone_number)
+    
+    # Check if the phone number starts with the French country code (+33)
+    if not phone_number.startswith('33'):
+        return False
+    
+    # Check if the phone number has the correct length (including the country code)
+    if len(phone_number) != 12:
+        return False
+    
+    # Check if the phone number has the correct format for the French way
+    if not re.match(r'^33[1-9][0-9]{8}$', phone_number):
+        return False
+    
+    return True
+```
+
