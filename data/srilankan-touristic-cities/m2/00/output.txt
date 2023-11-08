@@ -1,0 +1,53 @@
+Here's a simple Java code snippet that could generate your required test data of Sri Lankan touristic cities and most popular places to visit in them. This code doesn't use any library for the Sinhala language, but hard code Sinhalese string values inside it.
+
+```java
+import java.util.*;
+
+public class Main
+{
+    static class City {
+        String cityName;
+        List<String> touristSpots;
+
+        public City(String cityName, List<String> touristSpots) {
+            this.cityName = cityName;
+            this.touristSpots = touristSpots;
+        }
+
+        @Override
+        public String toString() {
+            StringBuilder sb = new StringBuilder();
+            sb.append(cityName).append(": ");
+            for(int i = 0; i < touristSpots.size(); i++) {
+                sb.append(touristSpots.get(i));
+                if (i != touristSpots.size() - 1) {
+                    sb.append(", ");
+                }
+            }
+            return sb.toString();
+        }
+    }
+
+    public static void main(String[] args) {
+        List<City> cities= new ArrayList<>();
+        // add data
+        cities.add(new City("කොළඹ", Arrays.asList("ගල්ලේස් නගරය", "විහාරමහ නගරය", "බෙම්මුල්ලවේ පුරවැසිය")));
+        cities.add(new City("කෑගල්ල", Arrays.asList("හන්දුනාවේ සමන්දෙව්", "පින්නවෙලා විහාරය")));
+        cities.add(new City("ගාලු", Arrays.asList("ගාලු මහා කෝටුව", "යටගම කිරීමේ සෙල්ලිපිය")));
+        cities.add(new City("නුවරඑළිය", Arrays.asList("සීගිරිය", "සංහිද මහාචේත්‍යාචාර්ය විහාරු සවුන්")));
+        cities.add(new City("මාතර", Arrays.asList("වීල්පත්තුව", "පොළොම්බණුවා කൊලු853763නා")));
+        cities.add(new City("කතරගම", Arrays.asList("චූනාවාරමස්තානය", "ධාතුංසුනේ විහාරය")));
+        cities.add(new City("දම්බුල්ල", Arrays.asList("ට්‍රිකුණාමළය", "රජනගරය", "මායාංගන විහාරය")));
+        cities.add(new City("අනුරාධපුරය", Arrays.asList("රූවන්වැලි සෑය", "තුප්පේරම සෑය", "අවුකන පොළොන්නාරුව")));
+        cities.add(new City("පොළොන්නරුව", Arrays.asList("පෝරමය", "ශ්‍රී ස්වීත්‍රප්‍රකාශගීය සම්පූර්ණ අඟුරුමැදෑය")));
+        cities.add(new City("මහනුවර", Arrays.asList("සෙනානායක පණ්වුව", "දළදා විහාරය")));
+
+        // print data
+        for(City city : cities) {
+            System.out.println(city);
+        }
+    }
+}
+```
+
+This code has a `City` class which contains city names and a list of its tourist spots. Inside the `main` method, instances of city are created and added to a list. Finally, the city details are printed in the console.

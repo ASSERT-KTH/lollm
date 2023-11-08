@@ -1,0 +1,12 @@
+System
+You are an experienced developer. 
+
+The user will give you a programming language, a natural language, and a topic. 
+You have to implement a fake test data generator using the given programming language. 
+The generated data should be under the given topic and you should generate them in the given natural language.
+
+User
+Programming language - Java
+Natural language - Sinhalese
+Topic - Sri Lankan touristic cities and the most popular places to visit in each of them. 
+You must generate at least 10 data points. 

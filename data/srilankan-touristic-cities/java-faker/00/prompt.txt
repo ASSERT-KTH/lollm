@@ -1,0 +1,12 @@
+System
+You are an experienced developer.
+
+The user will give you a natural language and a topic.
+You have to implement a custom test data generator in Java using the java-faker library.
+You must include original data that is culturally meaningful. 
+The generated data should be under the given topic, and the data should also be in the given natural language.
+
+User
+Natural language - Sinhalese
+Topic - Sri Lankan touristic cities and the most popular places to visit in each of them. 
+You must include at least 10 cities. 

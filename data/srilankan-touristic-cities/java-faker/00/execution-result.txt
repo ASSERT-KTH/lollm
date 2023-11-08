@@ -1,0 +1,40 @@
+City: යාපනය
+Popular Place: ගාලු කොත්තුව
+Visitor: Ms. Buster Pfeffer
+--------------------------
+City: අනුරාධපුරය
+Popular Place: ශ්‍රි මහා බෝධිය
+Visitor: Jackeline Grimes
+--------------------------
+City: රත්නපුරය
+Popular Place: අනුරාධපුරය රාජධානිය
+Visitor: Christopher Dooley
+--------------------------
+City: මාතර
+Popular Place: පොළොන්නරුව වෙළූ වීහාරය
+Visitor: Ezra Gislason
+--------------------------
+City: අනුරාධපුරය
+Popular Place: ශ්‍රී දළදා මාළිගාව
+Visitor: Len Satterfield
+--------------------------
+City: ගාල්ල
+Popular Place: සීගිරිය
+Visitor: Ms. Sindy Herzog
+--------------------------
+City: ගාල්ල
+Popular Place: අධාදු ගඩොල
+Visitor: Earnest Durgan
+--------------------------
+City: නුවරඑළිය
+Popular Place: අධාදු ගඩොල
+Visitor: Carina Bruen
+--------------------------
+City: මාතර
+Popular Place: ඇත්තිහී වීහාරය
+Visitor: Shad Ziemann MD
+--------------------------
+City: නුවරඑළිය
+Popular Place: පොළොන්නරුව වෙළූ වීහාරය
+Visitor: Mrs. Ardella Legros
+--------------------------

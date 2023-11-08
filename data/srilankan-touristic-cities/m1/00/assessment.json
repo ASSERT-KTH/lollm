@@ -1,0 +1,9 @@
+{
+    "model": "gpt4",
+    "prompt_type": "m1",
+    "prompt_language": "EN",
+    "data_constraints_can_be_checked": "yes",
+    "cultural_alignment": "2",
+    "cultural_alignment_quantitative": "3/10",
+    "comments":"The city names are correctly generated (with a few spelling mistakes), but the majority of the generated places are hallucinated names."
+}

@@ -1,0 +1,33 @@
+Here is a basic example of how you could set up a test data generator using the Java Faker library. Since the Faker library doesn't support the Sinhalese language, you might have to customize the cities and popular places in Sinhalese. Please remember to include the java-faker library in your project.
+
+```java
+import com.github.javafaker.Faker;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
+public class SriLankaTourismData {
+
+    private static final Random rand = new Random();
+    private static final Faker faker = new Faker();
+
+    private static final List<String> CITIES = Arrays.asList("කොළඹ", "කන්දි", "නුවරඑළිය", "ගාල්ල", "මාතර", "පොළොන්නරුව",
+            "අනුරාධපුරය", "යාපනය", "රත්නපුරය", "එන්න");
+
+    private static final List<String> PLACES = Arrays.asList("ශ්‍රී දළදා මාළිගාව", "ශ්‍රි මහා බෝධිය", "සීගිරිය",
+            "ගාලු කොත්තුව", "අධාදු ගඩොල", "පොළොන්නරුව වෙළූ වීහාරය", "අනුරාධපුරය රාජධානිය", "නාගාදීප කෝවිළ",
+            "ෂ්ෂාප්පාප් වීහාරය", "ඇත්තිහී වීහාරය");
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("City: %s%n", CITIES.get(rand.nextInt(CITIES.size())));
+            System.out.printf("Popular Place: %s%n", PLACES.get(rand.nextInt(PLACES.size())));
+            System.out.printf("Visitor: %s%n", faker.name().fullName());
+            System.out.println("--------------------------");
+        }
+    }
+}
+```
+In this example, the code generates a tourist city (chosen randomly from the list of ten cities that you supplied) and a popular place to visit in each city (also chosen randomly from your list of locations). In addition, it generates the full name of a visitor using the Faker library. The process is repeated ten times. 
+
+You might have to create your own database to effectively accomplish this task because the java-faker library does not currently include city-specific data or any data in the Sinhalese language.

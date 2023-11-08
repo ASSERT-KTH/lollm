@@ -1,0 +1,1 @@
+Generate at least 10 touristic cities in Sri Lanka along with the most popular places to visit in each city in Sinhala language.
