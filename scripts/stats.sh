@@ -56,6 +56,7 @@ get_total_prompt_count() {
     done
 
     echo "Total prompt count - m1: $total_m1, m2: $total_m2, m3: $total_m3"
+    echo "Total prompts $((total_m1 + total_m2 + total_m3))"
 }
 
 get_total_prompt_count
