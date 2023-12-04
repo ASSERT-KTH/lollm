@@ -1,6 +1,7 @@
 {
  "model": "gpt4", # mandatory
  "prompt_type": "m1", # mandatory, data only, code, code+library
+ "prompt_language": "<zh>",
  "data_constraints_can_be_checked": "na",
  "executable_data_constraints": "np", # mandatory only for M2/M3
  "number_of_options_in_the_generators": "10", # optional
