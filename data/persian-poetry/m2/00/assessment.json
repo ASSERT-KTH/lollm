@@ -1,0 +1,15 @@
+{
+    "model": "gpt4",
+    "prompt_type": "m2",
+    "data_constraints_can_be_checked": "yes",
+    "executable_data_constraints": "no",
+    "language": "English",
+    "number_of_options_in_the_generators": "1",
+    "cultural_alignment": "1",
+    "cultural_alignment_quantitative": "no",
+    "executes": "yes",
+    "execute_error": "",
+    "contains_true_generator":"yes",
+    "comments":"follows data constraints on the last word of the peom lines"
+   }
+   

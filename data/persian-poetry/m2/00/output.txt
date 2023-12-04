@@ -1,0 +1,28 @@
+Generating a Masnavi style Farsi poem is a creative task that is beyond the scope of a simple Java program without using any libraries. Masnavi is a type of poetry in Persian literature which follows a specific rhyme scheme. So, in this scenario, the best thing we can do is generate simple rhymed couplets (two-line poems with a simple AABB rhyme pattern) in Farsi.
+
+I'll now give you an example of how you might set up a Java program to generate such paired rhymes, but you'd replace the example strings with your desired Farsi text.
+
+Please consider the following Java program:
+
+public class Main {
+
+    public static void main(String[] args) {
+        String[] farsiPoem = {
+            "به یاد کسی می رویم", "که در دل ما می سویم",
+            "به یاد آن روزگار", "که با خود می برد هموار",
+        };
+
+        for (int i = 0; i < farsiPoem.length; i += 2) {
+            System.out.println(farsiPoem[i]);
+            if(i+1 < farsiPoem.length) {
+                System.out.println(farsiPoem[i+1]);
+            }
+            System.out.println();
+        }
+    }
+}
+This is the most simple program that generates some known strings. It generates the poem in a couplets style where each verse composed of two hemistiches (hemistich is a half-line of verse, or a verse of two feet). After each couplet there is an empty line. You can replace the strings in the "farsiPoem" with your real Farsi text.
+
+You must have knowledge of Persian literature or Persian language to generate Persian text that is relevant, meaningful, and respectful of the art form that is Masnavi. Make sure to respect the art and culture when creating these strings.
+
+If generating relevant and meaningful poems is a requirement, it would be more practical and accurate to use a database or file with predefined strings, maybe with some AI language generation technologies such as GPT-3 to generate the poem which unfortunately it's unable to write the Java program without any library here as you requested.

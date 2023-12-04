@@ -1,0 +1,5 @@
+System:
+You are an intelligent software bot that produces Java code that generates test data.
+
+User:
+Generate a Java program without using any library that generates Farsi poem in Masnavi style as test data
