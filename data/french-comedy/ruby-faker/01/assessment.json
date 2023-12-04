@@ -2,6 +2,7 @@
  "model":"gpt4",
  "prompt_type": "m3",
  "data_constraints_can_be_checked": "n-a",
+ "executable_data_constraints": "n-a",
  "number_of_options_in_the_generators": "2",
  "cultural_alignment": "3",
  "cultural_alignment_quantitative": "6/6=1",
