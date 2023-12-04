@@ -2,14 +2,9 @@
     "model":"gpt4",
     "prompt_type": "m1",
     "prompt_language": "es",
-    "data_constraints_can_be_checked": "n-a",
-    "executable_data_contstraints": "n-a",
     "number_of_options_in_the_generators": "10",
     "cultural_alignment": "4",
     "cultural_alignment_quantitative": "1",
-    "executes": "n-a",
-    "execute_error": "n-a",
-    "contains_true_generator":"n-a",
     "comments":"Fake players with fun nicknames(!), fake teams' names make align with the players' nationalities, fake superpowers are funny."
    }
    
