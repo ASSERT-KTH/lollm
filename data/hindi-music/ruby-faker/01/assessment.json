@@ -1,0 +1,13 @@
+{
+ "model": "gpt4",
+ "prompt_type": "m3",
+ "prompt_language": "en",
+ "data_constraints_can_be_checked": "yes",
+ "executable_data_constraints": "yes",
+ "number_of_options_in_the_generators": "20",
+ "cultural_alignment": "4",
+ "cultural_alignment_quantitative": "1",
+ "executes": "yes",
+ "contains_true_generator":"yes",
+ "comments": "Most lyrics for Kishore Kumar and Lata Mangeshkar songs seem correct, there are spelling errors." 
+}
