@@ -19,7 +19,7 @@
     },
     "executable_data_constraints": {
       "type": "string",
-      "enum": ["yes", "no"]
+      "enum": ["yes", "no", "n-a"]
     },
     "number_of_options_in_the_generators": {
       "type": "string"
