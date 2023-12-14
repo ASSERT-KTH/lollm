@@ -1,0 +1,49 @@
+1) Java Class 'Merlin'
+
+```java
+import com.github.javafaker.Faker;
+
+public class Merlin {
+    private final Faker faker;
+    
+    public Merlin(Faker faker)
+    {
+        this.faker = faker;
+    }
+    
+    public String character() {
+        return faker.fakeValuesService().resolve("merlin.characters", this, faker);
+    }
+    
+    public String city() {
+        return faker.fakeValuesService().resolve("merlin.cities", this, faker);
+    }
+
+}
+```
+
+In this Java class, I made 'Merlin' and it has two methods - character() and city(). 
+FakeValuesService is used to fetch the required data.
+
+2) YAML file 'en.yml'
+
+```yml
+en:
+  faker:
+    merlin:
+      characters: ['Merlin', 'Arthur', 'Gwen', 'Gaius', 'Uther Pendragon', 'Morgana', 'Lancelot', 'Percival', 'Leon', 'Elyan']
+      cities: ['Camelot', 'Ealdor', 'Nemeth', 'Mercia', 'Essetir', 'Gorlois', 'Annis', 'Caerleon', 'Sarrum', 'Igraine']
+```
+
+In en.yml file, I included a list of 10 characters and 10 cities known from the BBC series Merlin.
+
+To use this in java-faker library, one would just need to:
+
+```java
+Faker faker = new Faker();
+
+System.out.println("Merlin Character: " + faker.merlin().character());
+System.out.println("Merlin City: " + faker.merlin().city());
+```
+
+Both methods return a random value each time it is called.

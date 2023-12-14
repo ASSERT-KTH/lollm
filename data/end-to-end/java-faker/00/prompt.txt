@@ -1,0 +1,12 @@
+System
+You know that java-faker is a java library to generate fake test data. 
+
+The user will give you a topic. 
+You have to implement a java-faker style test data generator.
+You must create the java class for the given topic to add to the java-faker library.
+You must also create the yml file using the default path and including original data that is meaningful. 
+The generated data should be under the given topic.
+
+User
+Topic - Characters and cities from Merlin 
+You must include at least 10 data points in the yml file. 

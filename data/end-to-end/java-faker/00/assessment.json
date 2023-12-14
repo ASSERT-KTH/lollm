@@ -1,0 +1,14 @@
+{
+    "model": "gpt4",
+    "prompt_type": "m3",
+    "prompt_language": "EN",
+    "data_constraints_can_be_checked": "no",
+    "executable_data_constraints": "no",
+    "number_of_options_in_the_generators": "10",
+    "cultural_alignment": "5",
+    "cultural_alignment_quantitative": "9/10",
+    "executes": "yes",
+    "execute_error": "",
+    "contains_true_generator":"yes",
+    "comments":"Almost all the generated data are meaningful except for a few city names."
+}
