@@ -31,3 +31,20 @@ Example of `assessment.json`:
 
 About the `"number_of_options_in_the_generators"`, it is the number of possible data items done by the generators, for cominations it consists of the  enumeration of all possible combinations, it might be infinity / uncomputable is some cases. ^-^
 
+
+
+```
+Prompt counts for chinese-21st-TV - m1: 11, m2: 13, m3: 7
+Prompt counts for end-to-end - m1: 0, m2: 0, m3: 1
+Prompt counts for french-comedy - m1: 1, m2: 1, m3: 3
+Prompt counts for hindi-music - m1: 0, m2: 0, m3: 1
+Prompt counts for indian-festivals - m1: 0, m2: 0, m3: 1
+Prompt counts for latam-football - m1: 2, m2: 1, m3: 0
+Prompt counts for persian-poetry - m1: 2, m2: 1, m3: 1
+Prompt counts for portuguese-cuisine - m1: 0, m2: 0, m3: 3
+Prompt counts for portuguese-wine-pairing - m1: 2, m2: 0, m3: 4
+Prompt counts for sinhalese-music - m1: 2, m2: 0, m3: 3
+Prompt counts for srilankan-touristic-cities - m1: 1, m2: 1, m3: 1
+Total prompt count - m1: 21, m2: 17, m3: 25
+Total prompts 63
+```
