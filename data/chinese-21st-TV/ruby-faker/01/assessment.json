@@ -2,6 +2,7 @@
  "model":"gpt4",
  "data_constraints_can_be_checked": "n-a",
  "number_of_options_in_the_generators": "11",
+ "executable_data_constraints": "no",
  "cultural_alignment": "4",
  "cultural_alignment_quantitative": "29/33=0.88",
  "executes": "yes",
