@@ -1,7 +1,7 @@
 {
  "model": "QWEN",
  "prompt_type": "m1",
- "data_constraints_can_be_checked": "na",
+ "data_constraints_can_be_checked": "n-a",
  "executable_data_constraints": "no",
  "number_of_options_in_the_generators": "10",
  "cultural_alignment": "5",
