@@ -1,8 +1,8 @@
 {
  "model": "gpt4",
  "prompt_type": "m2",
- "data_constraints_can_be_checked": "na",
- "executable_data_constraints": "np",
+ "data_constraints_can_be_checked": "n-a",
+ "executable_data_constraints": "no",
  "number_of_options_in_the_generators": "17",
  "cultural_alignment": "17",
  "cultural_alignment_quantitative": "17/17=1",
