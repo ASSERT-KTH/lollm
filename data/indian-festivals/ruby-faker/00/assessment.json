@@ -1,6 +1,6 @@
 {
  "model": "gpt4",
- "prompt_type": "m2",
+ "prompt_type": "m3",
  "prompt_language": "en",
  "data_constraints_can_be_checked": "yes",
  "executable_data_constraints": "yes",
