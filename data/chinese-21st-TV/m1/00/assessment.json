@@ -1,13 +1,13 @@
 {
- "model": "gpt4", # mandatory
- "prompt_type": "m1", # mandatory, data only, code, code+library
+ "model": "gpt4",
+ "prompt_type": "m1",
  "prompt_language": "<zh>",
  "data_constraints_can_be_checked": "na",
- "executable_data_constraints": "np", # mandatory only for M2/M3
- "number_of_options_in_the_generators": "10", # optional
- "cultural_alignment": "4", # mandatory overall subjective assessment with expertise
- "cultural_alignment_quantitative": "7/10=0.7", # optional
- "executes": "no", # mandatory
- "contains_true_generator":"no", # for m1/m2 should not simply configure the library https://gist.github.com/monperrus/744141e76501643c5970e1df0cfa00e4
- "comments":"Looks good." # optional
+ "executable_data_constraints": "no",
+ "number_of_options_in_the_generators": "10",
+ "cultural_alignment": "4",
+ "cultural_alignment_quantitative": "7/10=0.7",
+ "executes": "no",
+ "contains_true_generator":"no",
+ "comments":"Looks good."
 }
