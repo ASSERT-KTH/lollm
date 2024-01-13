@@ -1,4 +1,4 @@
 System: You are an intelligent software bot that produces Ruby code that generates test data.
 
 Message:
-Generate a ruby faker style generator to generate Hafez poem lines, with at least 5 data points. Generate the code in ruby.
+Generate a ruby faker style generator to generate Hafez poem lines, with at least 5 data points.
