@@ -33,7 +33,13 @@ About the `"number_of_options_in_the_generators"`, it is the number of possible 
 
 
 
+### Results
+
 ```
+❯ grep -r '"executes": "yes"' data/ | wc -l
+29
+
+❯ ./scripts/stats.sh
 Prompt counts for chinese-21st-TV - m1: 11, m2: 13, m3: 7
 Prompt counts for end-to-end - m1: 0, m2: 0, m3: 1
 Prompt counts for french-comedy - m1: 1, m2: 1, m3: 3
