@@ -1,5 +1,5 @@
 {
-    "model": "gpt3.5",
+    "model": "gpt4",
     "prompt_type": "m1",
     "data_constraints_can_be_checked": "yes",
     "executable_data_constraints": "no",
@@ -10,6 +10,6 @@
     "executes": "no",
     "execute_error": "",
     "contains_true_generator":"no",
-    "comments":"doesn't follow data constraints on the last word of the peom lines"
+    "comments":"doesn't follow data constraints on the last word of the peom lines and deosn't read as a real poem"
    }
    
