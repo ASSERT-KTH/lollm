@@ -1,1 +1,1 @@
-Give me a Persian poem from Khayyam
+Give me a Farsi poem from Khayyam. Print it in Farsi
