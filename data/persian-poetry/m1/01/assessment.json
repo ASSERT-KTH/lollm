@@ -1,5 +1,5 @@
 {
-    "model": "gpt3.5",
+    "model": "gpt4",
     "prompt_type": "m1",
     "data_constraints_can_be_checked": "yes",
     "executable_data_constraints": "no",
