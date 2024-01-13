@@ -1,3 +1,5 @@
-[1mTraceback[m (most recent call last):
-	1: from playground.rb:1:in `<main>'
-playground.rb:1:in `require': [1mcannot load such file -- faker ([1;4mLoadError[m[1m)[m
+nihil magni voluptatibus
+repellendus sunt quae
+atque doloribus dolorem
+fugiat voluptate consequatur
+odio est provident
