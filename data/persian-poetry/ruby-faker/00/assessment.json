@@ -1,11 +1,11 @@
 {
- "model": "gpt35",
+ "model": "gpt4",
  "prompt_type": "m3",
  "data_constraints_can_be_checked": "yes",
  "executable_data_constraints": "no",
  "number_of_options_in_the_generators": "5",
  "cultural_alignment": "0",
  "cultural_alignment_quantitative": "0",
- "executes": "no",
- "contains_true_generator":"no"
+ "executes": "yes",
+ "contains_true_generator":"yes"
 }
