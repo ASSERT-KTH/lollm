@@ -1,5 +1,17 @@
-# lollm
-Generative AI to Generate Test Data Generators
+# LOLLM
+
+[Generative AI to Generate Test Data Generators](https://arxiv.org/pdf/2401.17626)
+
+```bibtex
+@article{testdatagenai2024,
+ title = {Generative AI to Generate Test Data Generators},
+ journal = {IEEE Software},
+ year = {2024},
+ doi = {10.1109/MS.2024.3418570},
+ author = {Benoit Baudry and Khashayar Etemadi and Sen Fang and Yogya Gamage and Yi Liu and Yuxin Liu and Martin Monperrus and Javier Ron and André Silva and Deepika Tiwari},
+ url = {http://arxiv.org/pdf/2401.17626},
+}
+```
 
 * `scripts/x.py` contains utilities and correctness checkers we might write
 * top folder: theme
